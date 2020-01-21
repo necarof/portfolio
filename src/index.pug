@@ -1,15 +1,323 @@
 include ./mixins.pug
 
-<!DOCTYPE html>
-html(lang="en")
+doctype html
+html(lang='ru')
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Никита Мастепанов
   body
-    .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+    header.header
+      .container
+        .header__wrapper
+          section.header__nav-wrapper
+            a.header__logo(href='index.html') NM
+            ul.header__nav
+              li
+                a.header__nav-item.hover(href='#') Главная
+              li
+                a.header__nav-item.hover(href='#') Обо мне
+              li
+                a.header__nav-item.hover(href='#') Навыки
+              li
+                a.header__nav-item.hover(href='#') Работы
+              li
+                a.header__nav-item.hover(href='#') Отзывы
+              li
+                a.header__nav-item.hover(href='#') Связаться
+            .header__social
+              a.header__social-item.hover(href='#')
+                svg
+                  use(xlink:href='images/icons/sprite.svg#insta')
+              a.header__social-item.hover(href='https://vk.com/id150001971', target='blank')
+                svg
+                  use(xlink:href='images/icons/sprite.svg#vk')
+              a.header__social-item.hover(href='https://github.com/necarof', target='blank')
+                svg
+                  use(xlink:href='images/icons/sprite.svg#github')
+          section.offer
+            h4.offer__subtitle
+              | Личный сайт 
+              br
+              |  веб разработчика
+            h1.offer__title
+              | Никита 
+              br
+              |  Мастепанов
+          section.scroll
+            span.scroll__text Скролл
+            span.scroll__icon
+              svg
+                use(xlink:href='images/icons/sprite.svg#scroll')
+        section.about
+          .about__wrapper
+            .about__left
+              .about__user-photo
+                img(src=require('images/content/user.jpg') alt='user', width='205px', height='205px')
+              .about__user-characteristic
+                ul.about__user-characteristic-feature
+                  li Проживаю:
+                  li Возраст:
+                  li Родился:
+                ul.about__user-characteristic-value
+                  li Павлодар
+                  li 33 Года
+                  li 30 декабря 1986
+            .about__right
+              h4.about__suptitle Привет, меня зовут
+              h2.about__title Никита Мастепанов
+              p.about__text
+                | Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p.about__quote
+                | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    section.skills
+      .container
+        .skills__wrapper
+          img.skills__img(src=require('images/content/kayboard.png'), alt='kayboard')
+          h2.skills__title Чем я могу быть полезен вам
+          p.skills__subtitle
+            | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          .skills__inner
+            .skills__category
+              h3.skills__category-title Front-end
+              ul.skills__category-inner
+                li.skills__category-item
+                  span.skills__category-tag HTML5
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+                li.skills__category-item
+                  span.skills__category-tag CSS3
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+                li.skills__category-item
+                  span.skills__category-tag Javascript
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+                li.skills__category-item
+                  span.skills__category-tag Vue js
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+            .skills__category
+              h3.skills__category-title Workflow
+              ul.skills__category-inner
+                li.skills__category-item
+                  span.skills__category-tag HTML5
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+                li.skills__category-item
+                  span.skills__category-tag CSS3
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+                li.skills__category-item
+                  span.skills__category-tag Javascript
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+                li.skills__category-item
+                  span.skills__category-tag Vue js
+                  svg.skills__category-svg(viewBox='0 0 150 150', preserveAspectRatio='none')
+                    circle(cx='75', cy='75', r='65', stroke-width='3', stroke='#454341', fill='none')
+                    circle.skills__category-svg-circle(cx='75', cy='75', r='65', stroke-width='10', stroke="url('#skills-gradient')", fill='none')
+                    lineargradient#skills-gradient(x1='0%', y1='0%', x2='100%', y2='0%')
+                      stop(offset='0%', stop-color='#d0731b')
+                      stop(offset='100%', stop-color='#dc9322')
+    section.portfolio
+      .container
+        h2.portfolio__title Мои работы
+        .portfolio__slider-wrapper
+          .swiper-container.gallery-top
+            .swiper-wrapper
+              .swiper-slide.portfolio__slider-item
+                img(src=require('images/works-preview/1.jpg'), alt='preview')
+                .portfolio__description
+                  .portfolio__description-number 1
+                  .portfolio__description-tags
+                    span.portfolio__description-tag HTML
+                    span.portfolio__description-tag CSS
+                    span.portfolio__description-tag Javascript
+                  h3.portfolio__description-title Сайт школы образования
+                  p.portfolio__description-text
+                    | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.portfolio__description-link(href='#') Посмотреть сайт
+              .swiper-slide.portfolio__slider-item
+                img(src=require('images/works-preview/2.jpg'), alt='preview')
+                .portfolio__description
+                  .portfolio__description-number 2
+                  .portfolio__description-tags
+                    span.portfolio__description-tag HTML
+                    span.portfolio__description-tag CSS
+                    span.portfolio__description-tag Javascript
+                  h3.portfolio__description-title Сайт школы образования
+                  p.portfolio__description-text
+                    | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.portfolio__description-link(href='#') Посмотреть сайт
+              .swiper-slide.portfolio__slider-item
+                img(src=require('images/works-preview/3.jpg'), alt='preview')
+                .portfolio__description
+                  .portfolio__description-number 3
+                  .portfolio__description-tags
+                    span.portfolio__description-tag HTML
+                    span.portfolio__description-tag CSS
+                    span.portfolio__description-tag Javascript
+                  h3.portfolio__description-title Сайт школы образования
+                  p.portfolio__description-text
+                    | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.portfolio__description-link(href='#') Посмотреть сайт
+              .swiper-slide.portfolio__slider-item
+                img(src=require('images/works-preview/4.jpg'), alt='preview')
+                .portfolio__description
+                  .portfolio__description-number 4
+                  .portfolio__description-tags
+                    span.portfolio__description-tag HTML
+                    span.portfolio__description-tag CSS
+                    span.portfolio__description-tag Javascript
+                  h3.portfolio__description-title Сайт школы образования
+                  p.portfolio__description-text
+                    | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.portfolio__description-link(href='#') Посмотреть сайт
+              .swiper-slide.portfolio__slider-item
+                img(src=require('images/works-preview/5.jpg'), alt='preview')
+                .portfolio__description
+                  .portfolio__description-number 5
+                  .portfolio__description-tags
+                    span.portfolio__description-tag HTML
+                    span.portfolio__description-tag CSS
+                    span.portfolio__description-tag Javascript
+                  h3.portfolio__description-title Сайт школы образования
+                  p.portfolio__description-text
+                    | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.portfolio__description-link(href='#') Посмотреть сайт
+            .portfolio-button-next
+              svg
+                use(xlink:href='images/icons/sprite.svg#arrow')
+            .portfolio-button-prev
+              svg
+                use(xlink:href='images/icons/sprite.svg#arrow')
+          // gallery-top
+          .swiper-container.gallery-thumbs.portfolio__slider-thumbs
+            .swiper-wrapper
+              .swiper-slide.portfolio__slider-thumbs-item
+                img(src=require('images/works-preview/1.jpg'), alt='preview')
+              .swiper-slide.portfolio__slider-thumbs-item
+                img(src=require('images/works-preview/2.jpg'), alt='preview')
+              .swiper-slide.portfolio__slider-thumbs-item
+                img(src=require('images/works-preview/3.jpg'), alt='preview')
+              .swiper-slide.portfolio__slider-thumbs-item
+                img(src=require('images/works-preview/4.jpg'), alt='preview')
+              .swiper-slide.portfolio__slider-thumbs-item
+                img(src=require('images/works-preview/5.jpg'), alt='preview')
+          // gallery-thumbs
+    section.contacts
+      .container
+        img.contacts__img(src=require('images/content/leaves.png'), alt='leaves')
+        section.reviews
+          .swiper-container.reviews__slider
+            h2.reviews__title Что обо мне говорят
+            .swiper-wrapper
+              .swiper-slide.reviews__slider-item
+                p.reviews__slider-text
+                  | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews__slider-inner
+                  .reviews__slider-photo
+                    img(src=require('images/content/client-foto.jpg'), alt='client')
+                  .reviews__slider-inner-client-name
+                    h4.reviews__slider-client-name Ковальчук Дмитрий
+                    span.reviews__slider-client-desc Основатель Loftschool
+              .swiper-slide.reviews__slider-item
+                p.reviews__slider-text
+                  | Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                .reviews__slider-inner
+                  .reviews__slider-photo
+                    img(src=require('images/content/client-foto2.jpg'), alt='client')
+                  .reviews__slider-inner-client-name
+                    h4.reviews__slider-client-name Владимир Сабанцев
+                    span.reviews__slider-client-desc Преподаватель
+            .reviews__button-next.hover
+              svg
+                use(xlink:href='images/icons/sprite.svg#arrow')
+            .reviews__button-prev.hover
+              svg
+                use(xlink:href='images/icons/sprite.svg#arrow')
+        section.section-contacts
+          h2.contacts__title Связаться со мной
+          form.contacts__form(action='#', method='POST')
+            .contacts__form-inner
+              .contacts__form-item
+                label.contacts__form-label(for='form-name') Введите ваше имя
+                input#form-name.contacts__form-input(type='text')
+              .contacts__form-item
+                label.contacts__form-label(for='form-email') Введите ваш email
+                input#form-email.contacts__form-input(type='email')
+            .contacts__form-item
+              label.contacts__form-label(for='form-text') Сообщение к письму
+              textarea#form-text.contacts__form-input(name='textarea', cols='30', rows='3')
+            button.btn(type='submit') Отправить
+    footer.footer
+      .container
+        .footer__wrapper-left
+          span.footer__copyright © 2020
+          span.footer__copyright-desc
+            h4.footer__copyright-title
+              | Никита
+              br
+              | Мастепанов
+            h5.footer__copyright-subtitle Личный сайт веб-разработчика
+        .footer__wrapper-right
+          ul.footer__nav
+            li
+              a.footer__nav-item.hover(href='#') Главная
+            li
+              a.footer__nav-item.hover(href='#') Обо мне
+            li
+              a.footer__nav-item.hover(href='#') Навыки
+            li
+              a.footer__nav-item.hover(href='#') Работы
+            li
+              a.footer__nav-item.hover(href='#') Отзывы
+            li
+              a.footer__nav-item.hover(href='#') Связаться
+          .footer__inner
+            .footer__socials
+              p.footer__socials-desc Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+              .footer__socials-icons
+                a.footer__social-item(href='#')
+                  svg.hover
+                    use(xlink:href='images/icons/sprite.svg#insta')
+                a.footer__social-item(href='https://vk.com/id150001971', target='blank')
+                  svg.hover
+                    use(xlink:href='images/icons/sprite.svg#vk')
+                a.footer__social-item(href='https://github.com/necarof', target='blank')
+                  svg.hover
+                    use(xlink:href='images/icons/sprite.svg#github')
+            .footer__quote
+              p.footer__quote-text
+                | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+              span.footer__quote-subtitle Martin Golding
