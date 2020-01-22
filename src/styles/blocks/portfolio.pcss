@@ -1,0 +1,142 @@
+/* ----- PORTFOLIO ----- */
+
+.portfolio {
+  padding: 200px 0;
+}
+
+.portfolio__title {
+  margin-bottom: 90px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333c49;
+}
+
+.portfolio__slider-wrapper {
+  position: relative;
+}
+
+.portfolio__slider-item {
+  display: flex;
+}
+
+.portfolio__slider-item img {
+  margin-right: 150px;
+  width: 980px;
+  height: 550px;
+}
+
+.portfolio__description {
+  position: relative;
+}
+
+.portfolio__description-number {
+  position: absolute;
+  left: -190px;
+  z-index: -1;
+  font-size: 400px;
+  font-weight: 800;
+  color: #e6e6e6;
+}
+
+.portfolio__description-tags {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.portfolio__description-tag {
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #a7a7a8;
+  background-color: #f3f5f9;
+  border-radius: 30px;
+}
+
+.portfolio__description-title {
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #333c49;
+}
+
+.portfolio__description-text {
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #82858c;
+}
+
+.portfolio__description-link {
+  position: relative;
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #586ed3;
+}
+
+.portfolio__description-link::before {
+  content: url('../images/icons/link-icon.png');
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.portfolio-button-next, 
+.portfolio-button-prev {
+  position: absolute;
+  top: 390px;
+  right: 390px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  fill: #727883;
+  background-color: #353e4e;
+}
+
+.portfolio-button-prev {
+  top: 440px;
+}
+
+.portfolio-button-next:hover,
+.portfolio-button-prev:hover {
+  fill: #fff;
+  background-color: #ff9a00;
+}
+
+.portfolio-button-next svg,
+.portfolio-button-prev svg {
+  height: 12px;
+}
+
+.portfolio-button-prev svg {
+  transform: rotate(180deg);
+}
+
+.portfolio__slider-thumbs {
+  position: absolute;
+  top: 390px;
+  right: 440px;
+  width: 720px;
+}
+
+.portfolio__slider-thumbs-item {
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.portfolio__slider-thumbs-item:hover {
+  border-color: #ff9a00; 
+}
