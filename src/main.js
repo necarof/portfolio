@@ -5,6 +5,8 @@ if (process.env.NODE_ENV === "development") {
 
 const Parallax = require('parallax-js')
 
+const swipper = require('swiper')
+
 import "./scripts/mainparallax";
 import "./scripts/skills";
 import "./scripts/works";
