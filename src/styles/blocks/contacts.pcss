@@ -31,18 +31,23 @@
   font-weight: 700;
 }
 
+.reviews__slider-wrapper {
+  display: flex;
+}
+
 .reviews__slider-item {
   padding-left: 100px;
 }
 
-.reviews__slider-item:before {
+.reviews__slider-text:before {
   content: url('../images/icons/left-quote.png');
 	position: absolute;
-	left: 0;
-	top: 10px;
+	left: -90px;
+	top: 0;
 }
 
 .reviews__slider-text {
+  position: relative;
   margin-bottom: 30px;
   max-width: 360px;
   min-height: 120px;
