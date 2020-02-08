@@ -4,6 +4,7 @@ html(lang='ru')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='https://unpkg.com/swiper/css/swiper.min.css')
     title Никита Мастепанов
   body
     header.header
@@ -182,28 +183,49 @@ html(lang='ru')
           .reviews__slider
             
             h2.reviews__title Что обо мне говорят
+
+            .swiper-container
             
-            .reviews__slider-wrapper
+              .reviews__slider-wrapper.swiper-wrapper
+                
+                .reviews__slider-item.swiper-slide
+                  p.reviews__slider-text
+                    | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                  .reviews__slider-inner
+                    .reviews__slider-photo
+                      img(src=require('images/content/client-foto.jpg'), alt='client')
+                    .reviews__slider-inner-client-name
+                      h4.reviews__slider-client-name Ковальчук Дмитрий
+                      span.reviews__slider-client-desc Основатель Loftschool
+                .reviews__slider-item.swiper-slide
+                  p.reviews__slider-text
+                    | Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                  .reviews__slider-inner
+                    .reviews__slider-photo
+                      img(src=require('images/content/client-foto2.jpg'), alt='client')
+                    .reviews__slider-inner-client-name
+                      h4.reviews__slider-client-name Владимир Сабанцев
+                      span.reviews__slider-client-desc Преподаватель
+
+                .reviews__slider-item.swiper-slide
+                  p.reviews__slider-text
+                    | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                  .reviews__slider-inner
+                    .reviews__slider-photo
+                      img(src=require('images/content/client-foto.jpg'), alt='client')
+                    .reviews__slider-inner-client-name
+                      h4.reviews__slider-client-name Ковальчук Дмитрий
+                      span.reviews__slider-client-desc Основатель Loftschool
+                .reviews__slider-item.swiper-slide
+                  p.reviews__slider-text
+                    | Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                  .reviews__slider-inner
+                    .reviews__slider-photo
+                      img(src=require('images/content/client-foto2.jpg'), alt='client')
+                    .reviews__slider-inner-client-name
+                      h4.reviews__slider-client-name Владимир Сабанцев
+                      span.reviews__slider-client-desc Преподаватель      
               
-              .reviews__slider-item
-                p.reviews__slider-text
-                  | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                .reviews__slider-inner
-                  .reviews__slider-photo
-                    img(src=require('images/content/client-foto.jpg'), alt='client')
-                  .reviews__slider-inner-client-name
-                    h4.reviews__slider-client-name Ковальчук Дмитрий
-                    span.reviews__slider-client-desc Основатель Loftschool
-              .reviews__slider-item
-                p.reviews__slider-text
-                  | Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                .reviews__slider-inner
-                  .reviews__slider-photo
-                    img(src=require('images/content/client-foto2.jpg'), alt='client')
-                  .reviews__slider-inner-client-name
-                    h4.reviews__slider-client-name Владимир Сабанцев
-                    span.reviews__slider-client-desc Преподаватель
-            
             .reviews__button-next.hover
               svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 492.004 492.004', style='enable-background:new 0 0 492.004 492.004;', xml:space='preserve')
                 g
@@ -235,7 +257,7 @@ html(lang='ru')
               label.contacts__form-label(for='form-text') Сообщение к письму
               textarea#form-text.contacts__form-input(name='textarea', cols='30', rows='3')
             .contacts__btn
-              button.btn(type='submit') Отправить
+              button.btn.form__btn(type='submit' onclick='event.preventDefault()') Отправить
     
     footer.footer
       .container
@@ -343,5 +365,7 @@ html(lang='ru')
               p.footer__quote-text
                 | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
               span.footer__quote-subtitle Martin Golding
+
+    script(src='https://unpkg.com/swiper/js/swiper.min.js')
 
     include ./templates/entry.pug

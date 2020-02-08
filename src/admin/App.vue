@@ -1,12 +1,19 @@
 <template lang="pug">
-  h1 Заголовок
+  .wrapper
+    .appHeader
+      appHeader
+    .tabs
+      tabs
+    .about
+      about 
 </template>
 
 <script>
   export default {
     components: {
       appHeader: () => import("./components/header"),
-      tabs: () => import("./components/tabs")
+      tabs: () => import("./components/tabs"),
+      about: () => import("./components/about")
     }
   };
 </script>
@@ -17,7 +24,5 @@
   @import "normalize.css";
   @import "../styles/mixins.pcss";
   @import "../styles/layout/base.pcss";
-
-
 
 </style>
