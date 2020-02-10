@@ -12,15 +12,3 @@ var swiper = new Swiper('.reviews__slider .swiper-container', {
     }
   }
 });
-
-//form 
-
-var btn = contacts__form.querySelector(".form__btn");
-var text = contacts__form.querySelector("[type=text]");
-var email = contacts__form.querySelector("[type=email]");
-
-btn.addEventListener("click", function(evt) {
-  if (!text.value || !email.value) {
-    evt.preventDefault();
-  }
-});

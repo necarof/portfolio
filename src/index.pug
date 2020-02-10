@@ -249,15 +249,15 @@ html(lang='ru')
             .contacts__form-inner
               .contacts__form-item
                 label.contacts__form-label(for='form-name') Введите ваше имя
-                input#form-name.contacts__form-input(type='text')
+                input#form-name.contacts__form-input(type='text', required='')
               .contacts__form-item
                 label.contacts__form-label(for='form-email') Введите ваш email
-                input#form-email.contacts__form-input(type='email')
+                input#form-email.contacts__form-input(type='email', required='')
             .contacts__form-item
               label.contacts__form-label(for='form-text') Сообщение к письму
               textarea#form-text.contacts__form-input(name='textarea', cols='30', rows='3')
             .contacts__btn
-              button.btn.form__btn(type='submit' onclick='event.preventDefault()') Отправить
+              button.btn.form__btn(type='submit') Отправить
     
     footer.footer
       .container
